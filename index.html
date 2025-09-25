@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sébastien Macé - Doctorant en Mathématiques</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body > <!-- oncontextmenu="return false;" -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <main>
+      <section id="about" class="section">
+        <div class="about-container">
+          <div class="about-content">
+            <div class="image-wrapper">
+              <div class="photo-container">
+                <img src="images/ta-photo.jpg" alt="photo" class="photo" />
+              </div>
+            </div>
+            <div class="text-container">
+              <h2>Qui suis-je ?</h2>
+              <p>
+                Je m'appelle Sébastien Macé et je suis doctorant sous la
+                direction de
+                <a
+                  href="https://adrienlaurent.net/index.html"
+                  target="_blank"
+                  rel="noopener"
+                  >Adrien Busnot Laurent</a
+                >
+                et
+                <a
+                  href="https://people.rennes.inria.fr/Nicolas.Crouseilles/"
+                  target="_blank"
+                  rel="noopener"
+                  >Nicolas Crouseilles</a
+                >.
+                <br />
+                J'appartiens à l'équipe
+                <a
+                  href="https://team.inria.fr/mingus/"
+                  target="_blank"
+                  rel="noopener"
+                  >MINGuS</a
+                >
+                de l'<a
+                  href="https://www.inria.fr/en/inria-centre-rennes-university"
+                  target="_blank"
+                  rel="noopener"
+                  >INRIA Rennes</a
+                >.
+              </p>
+              <h3>Mes sujets de recherche:</h3>
+              <ul>
+                <li>
+                  Méthodes numériques pour les équation différentielle
+                  stochastique,
+                </li>
+                <li>Intégration numérique et géométrique,</li>
+                <li>Structures algébriques en analyse numérique,</li>
+                <li>Mathématiques appliquées à la biologie,</li>
+                <li>Les mathématiques en général!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cadre" class="section">
+        <h3>Dynamique sur variété</h3>
+        <p>
+          Soit \((\mathcal{M}, g)\) une variété riemannienne lisse, complète et
+          connexe munie d'une métrique \(g\).<br />
+          Soient \(E_1, \dots, E_D\) un repère de \(\mathcal{M}\).<br />
+          Pour un champ de vecteurs tangents lisse et lipschitz \(F : x \mapsto
+          \underset{d=1}{\overset{D}{\sum}} f^d(x) E_d(x)\), on considère l’équation différentielle
+          stochastique (de Stratonovich) sur \(\mathcal{M}\) :
+        </p>
+        <p>
+          \[ dX(t) = F(X(t))\,dt + \sqrt{2} \underset{d=1}{\overset{D}{\sum}} E_d(X(t)) \circ dW_d(t)
+          \]
+        </p>
+      </section>
+
+      <section id="theorem" class="section">
+        <h3>Mon théorème</h3>
+        <p>La méthode numérique intrinsèque et consistante suivante :</p>
+        <div class="blur-equation">
+          \[ \begin{aligned} H_n &= \exp\left( \underset{d=1}{\overset{D}{\sum}} \left( h f^d(X_n) +
+          \sqrt{2h} \xi_n^d \right) E_d \right) X_n \\ X_{n+1} &= \exp\left(
+          \underset{d=1}{\overset{D}{\sum}} \frac{h}{2} f^d(H_n) E_d \right) \exp\left( \underset{d=1}{\overset{D}{\sum}}
+          \left( \frac{h}{2} f^d(X_n) + \sqrt{2h} \xi_n^d \right) E_d \right)
+          X_n \end{aligned} \]
+        </div>
+        <p>
+          est d'<strong>ordre faible 1</strong> et d'<strong
+            >ordre 2 pour la mesure invariante</strong
+          >.
+        </p>
+        <img src="images/ordre2.png" alt="ordre 2" class="img" />
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="include.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        // Attendre que MathJax ait fini son rendu
+        if (window.MathJax) {
+          MathJax.typesetPromise().then(() => {
+            // Sélectionne l'équation dans #theorem
+            const theoremSection = document.getElementById("theorem");
+            // Cherche un conteneur rendu par MathJax (ex: mjx-container, MathJax or mjx-chtml)
+            const mathElem = theoremSection.querySelector(
+              ".mjx-chtml, .MathJax, mjx-container, .MathJax_SVG"
+            );
+            if (mathElem) {
+              mathElem.style.filter = "blur(6px)";
+              mathElem.style.userSelect = "none";
+              mathElem.style.pointerEvents = "none";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
