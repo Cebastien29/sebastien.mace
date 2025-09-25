@@ -64,7 +64,7 @@
                 <li>Intégration numérique et géométrique,</li>
                 <li>Structures algébriques en analyse numérique,</li>
                 <li>Mathématiques appliquées à la biologie,</li>
-                <li>Les mathématiques en général!</li>
+                <li>Les mathématiques en général !</li>
               </ul>
             </div>
           </div>
@@ -86,46 +86,8 @@
           \]
         </p>
       </section>
-
-      <section id="theorem" class="section">
-        <h3>Mon théorème</h3>
-        <p>La méthode numérique intrinsèque et consistante suivante :</p>
-        <div class="blur-equation">
-          \[ \begin{aligned} H_n &= \exp\left( \underset{d=1}{\overset{D}{\sum}} \left( h f^d(X_n) +
-          \sqrt{2h} \xi_n^d \right) E_d \right) X_n \\ X_{n+1} &= \exp\left(
-          \underset{d=1}{\overset{D}{\sum}} \frac{h}{2} f^d(H_n) E_d \right) \exp\left( \underset{d=1}{\overset{D}{\sum}}
-          \left( \frac{h}{2} f^d(X_n) + \sqrt{2h} \xi_n^d \right) E_d \right)
-          X_n \end{aligned} \]
-        </div>
-        <p>
-          est d'<strong>ordre faible 1</strong> et d'<strong
-            >ordre 2 pour la mesure invariante</strong
-          >.
-        </p>
-        <img src="images/ordre2.png" alt="ordre 2" class="img" />
-      </section>
     </main>
     <div id="footer"></div>
     <script src="include.js"></script>
-    <script>
-      window.addEventListener("load", () => {
-        // Attendre que MathJax ait fini son rendu
-        if (window.MathJax) {
-          MathJax.typesetPromise().then(() => {
-            // Sélectionne l'équation dans #theorem
-            const theoremSection = document.getElementById("theorem");
-            // Cherche un conteneur rendu par MathJax (ex: mjx-container, MathJax or mjx-chtml)
-            const mathElem = theoremSection.querySelector(
-              ".mjx-chtml, .MathJax, mjx-container, .MathJax_SVG"
-            );
-            if (mathElem) {
-              mathElem.style.filter = "blur(6px)";
-              mathElem.style.userSelect = "none";
-              mathElem.style.pointerEvents = "none";
-            }
-          });
-        }
-      });
-    </script>
   </body>
 </html>
