@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cebastien29.github.io/sebastien.mace/sitemap.xml
