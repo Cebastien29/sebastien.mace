@@ -1,0 +1,32 @@
+name: Générer le sitemap
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Générer le sitemap XML
+
+    steps:
+    - name: Checkout du dépôt
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0        # ← obligatoire pour avoir les dates de commit (lastmod)
+
+    - name: Générer le sitemap
+      id: sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://cebastien29.github.io/sebastien.mace/
+        include-pdf: false    # ← on exclut ton CV.pdf du sitemap
+        exclude-paths: /google82810b8111a47131.html   # ← inutile dans le sitemap
+
+    - name: Commit et push du sitemap
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add sitemap.xml
+        git diff --cached --quiet || git commit -m "Mise à jour automatique du sitemap"
+        git push
