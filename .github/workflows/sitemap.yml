@@ -21,7 +21,7 @@ jobs:
       with:
         base-url-path: https://cebastien29.github.io/sebastien.mace/
         include-pdf: false    # ← on exclut ton CV.pdf du sitemap
-        exclude-paths: /google82810b8111a47131.html   # ← inutile dans le sitemap
+        exclude-paths: /google82810b8111a47131.html /header.html /footer.html /nav.html   # ← inutile dans le sitemap
 
     - name: Commit et push du sitemap
       run: |
