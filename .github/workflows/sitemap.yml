@@ -13,15 +13,15 @@ jobs:
     - name: Checkout du dépôt
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0        # ← obligatoire pour avoir les dates de commit (lastmod)
+        fetch-depth: 0
 
     - name: Générer le sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://cebastien29.github.io/sebastien.mace/
-        include-pdf: false    # ← on exclut ton CV.pdf du sitemap
-        exclude-paths: /google82810b8111a47131.html /header.html /footer.html /nav.html   # ← inutile dans le sitemap
+        include-pdf: false
+        exclude-paths: /google82810b8111a47131.html /header.html /footer.html /nav.html
 
     - name: Commit et push du sitemap
       run: |
