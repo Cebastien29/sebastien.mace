@@ -1,9 +1,10 @@
 window.addEventListener("DOMContentLoaded", async () => {
   const components = ["header", "footer"];
+  const base = document.querySelector('base')?.href ?? 'https://cebastien29.github.io/sebastien.mace/';
 
   await Promise.all(
     components.map(async (id) => {
-      const res = await fetch(`/shared/${id}.html`);
+      const res = await fetch(`${base}Shared/${id}.html`);
       const html = await res.text();
       document.getElementById(id).innerHTML = html;
     })
