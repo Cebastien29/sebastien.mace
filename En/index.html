@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sébastien Macé",
+        "jobTitle": "PhD student in Mathematics",
+        "email": "sebastien.mace@univ-rennes.fr",
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "INRIA Rennes — MINGuS team",
+            "url": "https://team.inria.fr/mingus/"
+          },
+          {
+            "@type": "Organization",
+            "name": "IRMAR — Mathematics Research Institute of Rennes",
+            "url": "https://irmar.univ-rennes.fr"
+          }
+        ],
+        "url": "https://cebastien29.github.io/sebastien.mace/",
+        "sameAs": [
+          "https://hal.science/search/index/q/*/authIdHal_s/sebastien-mace",
+          "https://orcid.org/0009-0005-4485-9233",
+          "https://arxiv.org/abs/2606.06150"
+        ],
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "IdHAL",
+            "value": "sebastien-mace",
+            "url": "https://hal.science/search/index/q/*/authIdHal_s/sebastien-mace"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "ORCID",
+            "value": "0009-0005-4485-9233",
+            "url": "https://orcid.org/0009-0005-4485-9233"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "arXiv",
+            "value": "2606.06150",
+            "url": "https://arxiv.org/abs/2606.06150"
+          }
+        ],
+        "hasOccupation": {
+          "@type": "ScholarlyArticle",
+          "name": "Post-processed frozen-flow methods for the long-time sampling of ergodic dynamics on Riemannian manifolds",
+          "author": ["Adrien Busnot Laurent", "Sébastien Macé"],
+          "url": "https://arxiv.org/abs/2606.06150",
+          "datePublished": "2026-06-04",
+          "about": "Numerical methods, stochastic differential equations, Riemannian manifolds"
+        }
+      }
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Sébastien Macé, PhD student in mathematics at IRMAR. Development of numerical methods for solving stochastic differential equations on Riemannian manifolds."
+    />
+    <title>Sébastien Macé - PhD student in Mathematics</title>
+
+    <link rel="stylesheet" href="/Assets/css/style.css" />
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+
+    <body data-subtitle="PhD student">
+    <!-- oncontextmenu="return false;" -->
+    <div id="header"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="/Fr/">French</a>
+      <a href="/En/">Home</a>
+      <a href="/En/publications.html">Publications</a>
+      <a href="/En/teaching.html">Teaching</a>
+      <a href="/En/outreach.html">Outreach</a>
+      <a href="/En/education.html">Education</a>
+      <a href="/Assets/pdf/CV.pdf" target="_blank">CV</a>
+      <a href="/En/contact.html">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about" class="section">
+        <h1>About me</h1>
+
+        <div class="about-container">
+          <div class="about-content">
+            <div class="image-wrapper">
+              <div class="photo-container">
+                <img
+                  src="/Assets/images/ta-photo.jpg"
+                  alt="Portrait of Sébastien Macé, PhD student in mathematics"
+                  class="photo"
+                />
+              </div>
+            </div>
+
+            <div class="text-container">
+              <p>
+                My name is Sébastien Macé and I am a PhD student supervised by
+                <a href="https://adrienlaurent.net/index.html" target="_blank" rel="noopener">
+                  Adrien Busnot Laurent
+                </a>
+                and
+                <a href="https://people.rennes.inria.fr/Nicolas.Crouseilles/" target="_blank" rel="noopener">
+                  Nicolas Crouseilles
+                </a>.
+                <br />
+                I am part of the
+                <a href="https://team.inria.fr/mingus/" target="_blank" rel="noopener">MINGuS</a>
+                team at
+                <a href="https://www.inria.fr/en/inria-centre-rennes-university" target="_blank" rel="noopener">
+                  INRIA Rennes
+                </a>.
+              </p>
+
+              <p>
+                I joined the IRMAR
+                <a href="https://irmar.univ-rennes.fr/commission-parite" target="_blank" rel="noopener">
+                  gender equality committee
+                </a>
+                in September 2025.
+              </p>
+
+              <p>
+                Holder of the sports commissioner diploma issued by CNKDR, I contribute to the organization and supervision of national Chanbara competitions for the Dojo des Abers.
+              </p>
+
+              <h3>Research interests:</h3>
+              <ul>
+                <li>Numerical analysis</li>
+                <li>Numerical methods for stochastic differential equations</li>
+                <li>Numerical and geometric integration</li>
+                <li>Algebraic structures in numerical analysis</li>
+                <li>Applied mathematics in biology and physics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h1>My work</h1>
+
+        <p>
+          I study the construction of numerical methods for solving stochastic differential equations on a Riemannian manifold \(\mathcal{M}\).<br />
+          In particular, I aim to approximate the invariant measure of the Riemannian Langevin equation:
+        </p>
+
+        <p>
+          \[ dX(t) = - \nabla V(X(t))\,dt + \sqrt{2}\, dB_{\mathcal{M}}(t). \]
+        </p>
+
+        <p>
+          I briefly present two second-order methods for approximating the invariant measure. Details are available on
+          <a href="https://arxiv.org/abs/2606.06150" target="_blank">arXiv</a>.
+          The first one uses a post-processor:
+        </p>
+
+        <div class="algorithm">
+          <h3>Post-processed frozen-flow method</h3>
+          <ul>
+            <li>
+              \[ H_n = \exp \left( \frac{\sqrt{2h}}{2} \xi^d_n \right) E_d X_n \]
+            </li>
+            <li>
+              \[ X_{n+1} = \exp \left( \frac{5h}{4} F(H_n) + \frac{\sqrt{2h}}{4}
+              \xi^d_n E_d \right)
+              \exp \left( -\frac{h}{4} F(H_n) + \frac{3\sqrt{2h}}{4} \xi^d_n E_d \right)
+              X_n \]
+            </li>
+            <li>
+              \[ \overline{X_N} = \exp \left( \frac{\sqrt{2h}}{2}
+              \overline{\xi^d_N} E_d \right) X_N \]
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          The second corresponds to the Heun method in the Euclidean case:
+        </p>
+
+        <div class="algorithm">
+          <h3>Stochastic frozen-flow Heun method</h3>
+          <ul>
+            <li>
+              \[ H_n = \exp \left( h F(X_n) + \sqrt{2h} \xi^d_n E_d \right) X_n \]
+            </li>
+            <li>
+              \[ X_{n+1} = \exp \left( \frac{h}{2} F(H_n) \right)
+              \exp \left( \frac{h}{2} F(X_n) + \sqrt{2h} \xi^d_n E_d \right)
+              X_n \]
+            </li>
+          </ul>
+        </div>
+
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="/Shared/include.js"></script>
+  </body>
+</html>
