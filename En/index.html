@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <base href="https://cebastien29.github.io/sebastien.mace/En/">
-    <link rel="canonical" href="https://cebastien29.github.io/sebastien.mace/En/">
+    <base href="https://cebastien29.github.io/sebastien.mace/En/" />
+    <link
+      rel="canonical"
+      href="https://cebastien29.github.io/sebastien.mace/En/"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -73,18 +76,36 @@
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
-<link rel="alternate" hreflang="en" href="https://cebastien29.github.io/sebastien.mace/En/" />
-<link rel="alternate" hreflang="fr" href="https://cebastien29.github.io/sebastien.mace/Fr/" />
-<link rel="alternate" hreflang="x-default" href="https://cebastien29.github.io/sebastien.mace/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://cebastien29.github.io/sebastien.mace/En/"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://cebastien29.github.io/sebastien.mace/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://cebastien29.github.io/sebastien.mace/"
+    />
   </head>
 
-    <body data-subtitle="PhD student">
+  <body data-subtitle="PhD student">
     <!-- oncontextmenu="return false;" -->
     <div id="header"></div>
 
     <!-- NAVIGATION -->
     <nav>
-      <a href="../Fr/"><img src="../Assets/images/france.png" alt="Français" width="24" height="16"></a>
+      <a href="../Fr/"
+        ><img
+          src="../Assets/images/france.png"
+          alt="Français"
+          width="24"
+          height="16"
+      /></a>
       <a href="">Home</a>
       <a href="publications.html">Publications</a>
       <a href="teaching.html">Teaching</a>
@@ -96,7 +117,8 @@
 
     <main>
       <section id="about" class="section">
-        <h1>About me</h1><hr class="section-divider">
+        <h1>About me</h1>
+        <hr class="section-divider" />
 
         <div class="about-container">
           <div class="about-content">
@@ -113,32 +135,55 @@
             <div class="text-container">
               <p>
                 My name is Sébastien Macé and I am a PhD student supervised by
-                <a href="https://adrienlaurent.net/index.html" target="_blank" rel="noopener">
+                <a
+                  href="https://adrienlaurent.net/index.html"
+                  target="_blank"
+                  rel="noopener"
+                >
                   Adrien Busnot Laurent
                 </a>
                 and
-                <a href="https://people.rennes.inria.fr/Nicolas.Crouseilles/" target="_blank" rel="noopener">
-                  Nicolas Crouseilles
-                </a>.
+                <a
+                  href="https://people.rennes.inria.fr/Nicolas.Crouseilles/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Nicolas Crouseilles </a
+                >.
                 <br />
                 I am part of the
-                <a href="https://team.inria.fr/mingus/" target="_blank" rel="noopener">MINGuS</a>
+                <a
+                  href="https://team.inria.fr/mingus/"
+                  target="_blank"
+                  rel="noopener"
+                  >MINGuS</a
+                >
                 team at
-                <a href="https://www.inria.fr/en/inria-centre-rennes-university" target="_blank" rel="noopener">
-                  INRIA Rennes
-                </a>.
+                <a
+                  href="https://www.inria.fr/en/inria-centre-rennes-university"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  INRIA Rennes </a
+                >.
               </p>
 
               <p>
                 I joined the IRMAR
-                <a href="https://irmar.univ-rennes.fr/commission-parite" target="_blank" rel="noopener">
+                <a
+                  href="https://irmar.univ-rennes.fr/commission-parite"
+                  target="_blank"
+                  rel="noopener"
+                >
                   gender equality committee
                 </a>
                 in September 2025.
               </p>
 
               <p>
-                Holder of the sports commissioner diploma issued by CNKDR, I contribute to the organization and supervision of national Chanbara competitions for the Dojo des Abers.
+                Holder of the sports commissioner diploma issued by CNKDR, I
+                contribute to the organization and supervision of national
+                Chanbara competitions for the Dojo des Abers.
               </p>
 
               <h3>Research interests:</h3>
@@ -156,8 +201,10 @@
         <h2>My work</h2>
 
         <p>
-          I study the construction of numerical methods for solving stochastic differential equations on a Riemannian manifold \(\mathcal{M}\).<br />
-          In particular, I aim to approximate the invariant measure of the Riemannian Langevin equation:
+          I study the construction of numerical methods for solving stochastic
+          differential equations on a Riemannian manifold \(\mathcal{M}\).<br />
+          In particular, I aim to approximate the invariant measure of the
+          Riemannian Langevin equation:
         </p>
 
         <p>
@@ -165,7 +212,8 @@
         </p>
 
         <p>
-          I briefly present two second-order methods for approximating the invariant measure. Details are available on
+          I briefly present two second-order methods for approximating the
+          invariant measure. Details are available on
           <a href="https://arxiv.org/abs/2606.06150" target="_blank">arXiv</a>.
           The first one uses a post-processor:
         </p>
@@ -174,13 +222,13 @@
           <h3>Post-processed frozen-flow method</h3>
           <ul>
             <li>
-              \[ H_n = \exp \left( \frac{\sqrt{2h}}{2} \xi^d_n \right) E_d X_n \]
+              \[ H_n = \exp \left( \frac{\sqrt{2h}}{2} \xi^d_n \right) E_d X_n
+              \]
             </li>
             <li>
               \[ X_{n+1} = \exp \left( \frac{5h}{4} F(H_n) + \frac{\sqrt{2h}}{4}
-              \xi^d_n E_d \right)
-              \exp \left( -\frac{h}{4} F(H_n) + \frac{3\sqrt{2h}}{4} \xi^d_n E_d \right)
-              X_n \]
+              \xi^d_n E_d \right) \exp \left( -\frac{h}{4} F(H_n) +
+              \frac{3\sqrt{2h}}{4} \xi^d_n E_d \right) X_n \]
             </li>
             <li>
               \[ \overline{X_N} = \exp \left( \frac{\sqrt{2h}}{2}
@@ -189,24 +237,21 @@
           </ul>
         </div>
 
-        <p>
-          The second corresponds to the Heun method in the Euclidean case:
-        </p>
+        <p>The second corresponds to the Heun method in the Euclidean case:</p>
 
         <div class="algorithm">
           <h3>Stochastic frozen-flow Heun method</h3>
           <ul>
             <li>
-              \[ H_n = \exp \left( h F(X_n) + \sqrt{2h} \xi^d_n E_d \right) X_n \]
+              \[ H_n = \exp \left( h F(X_n) + \sqrt{2h} \xi^d_n E_d \right) X_n
+              \]
             </li>
             <li>
-              \[ X_{n+1} = \exp \left( \frac{h}{2} F(H_n) \right)
-              \exp \left( \frac{h}{2} F(X_n) + \sqrt{2h} \xi^d_n E_d \right)
-              X_n \]
+              \[ X_{n+1} = \exp \left( \frac{h}{2} F(H_n) \right) \exp \left(
+              \frac{h}{2} F(X_n) + \sqrt{2h} \xi^d_n E_d \right) X_n \]
             </li>
           </ul>
         </div>
-
       </section>
     </main>
 
